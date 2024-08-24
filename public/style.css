@@ -605,6 +605,10 @@ video {
   display: flex;
 }
 
+.hidden{
+  display: none;
+}
+
 .h-16{
   height: 4rem;
 }
@@ -793,4 +797,36 @@ video {
 .outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.transition-all{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-\[2000ms\]{
+  transition-duration: 2000ms;
+}
+
+.duration-\[300ms\]{
+  transition-duration: 300ms;
+}
+
+.ease-in{
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.ease-\[ease\]{
+  transition-timing-function: ease;
+}
+
+.hover\:bg-blue-600:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.hover\:text-white:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
