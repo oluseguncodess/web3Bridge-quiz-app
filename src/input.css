@@ -7,5 +7,17 @@
 @layer components {
     .center {
       @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+    } 
+
+    .icon {
+        @apply h-[26px] w-[26px] border-2 border-solid  rounded-[50%] text-center text-[13px] leading-[24px];
+    }
+
+    .correct {
+        @apply text-green-500 border-green-500
+    }
+
+    .wrong {
+        @apply bg-red-200 text-red-700 border-red-700
     }
   }
