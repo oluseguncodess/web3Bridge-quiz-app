@@ -651,6 +651,14 @@ video {
   height: 4.375rem;
 }
 
+.h-\[60px\]{
+  height: 60px;
+}
+
+.h-\[40px\]{
+  height: 40px;
+}
+
 .w-\[2\.8125rem\]{
   width: 2.8125rem;
 }
@@ -724,6 +732,10 @@ video {
 
 .border-solid{
   border-style: solid;
+}
+
+.border-none{
+  border-style: none;
 }
 
 .border-blue-100{
@@ -819,6 +831,21 @@ video {
   padding-bottom: 1rem;
 }
 
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .pb-5{
   padding-bottom: 1.25rem;
 }
@@ -833,6 +860,14 @@ video {
 
 .pt-6{
   padding-top: 1.5rem;
+}
+
+.pr-2{
+  padding-right: 0.5rem;
+}
+
+.pr-1{
+  padding-right: 0.25rem;
 }
 
 .text-center{
@@ -901,14 +936,29 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.outline-none{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 .transition-all{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
+.transition-\[ease\]{
+  transition-property: ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-\[300ms\]{
   transition-duration: 300ms;
+}
+
+.duration-\[0\.3s\]{
+  transition-duration: 0.3s;
 }
 
 .ease-\[ease\]{
