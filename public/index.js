@@ -3,7 +3,7 @@ const start = document.querySelector('.start');
 const rules = document.querySelector('.rules');
 const questions = document.querySelector('.questions');
 const result = document.querySelector('.result');
-const qtnNum = document.querySelector('.qtn-num')
+const bottomCounter = document.querySelector('.bottom-counter')
 
 const startBtn = document.querySelector('.start-btn');
 const exitBtn = document.querySelector('.exitBtn');
@@ -33,12 +33,11 @@ function handleNextQuestion(params) {
         showQuestion(que_count);
     } else {
         console.log("Questions Completed");
-        
     }
 
-    
-    
+    let bottom_number_counter = `<span class="flex select-none"><p class="font-medium pr-1">${que_count+1}</p>Of<p class="font-medium px-1">5</p>Questions</span>`
 
+    bottomCounter.innerHTML = bottom_number_counter;
 }
 
 //start quiz button    
@@ -70,8 +69,8 @@ let que_count = 0;
  }
 
 
-// <--***** QUESTIONS --*****-->
-// <--***** QUESTIONS --*****-->
+// <--***** QUESTIONS OBJECT DATABASE--*****-->
+// <--***** QUESTIONS OBJECT DATABASE--*****-->
 
 let questionss = [
     {
