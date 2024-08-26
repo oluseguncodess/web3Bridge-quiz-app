@@ -24,4 +24,8 @@
     .active {
         @apply opacity-[1] pointer-events-none -translate-x-1/2 -translate-y-1/2 scale-100 z-[5]
     }
+
+    .option {
+        @apply bg-blue-100 border-[1px] border-solid border-blue-300 rounded-md py-3 px-4 mb-4 flex items-center justify-between cursor-pointer hover:bg-blue-500 hover:text-white
+    }
   }

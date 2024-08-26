@@ -6,6 +6,7 @@ const result = document.querySelector('.result');
 
 const startBtn = document.querySelector('.start-btn');
 const exitBtn = document.querySelector('.exitBtn');
+const nextQtn = document.querySelector('.next-qtn');
 
 function rulesOpen() {
     rules.classList.remove("opacity-0");
@@ -17,14 +18,17 @@ function rulesClose() {
     rules.classList.remove("active");
 }
 
-function startQuestions () {
+function startQuestions() {
     rulesClose();
     questions.classList.remove("opacity-0");
     questions.classList.add("active");
-    showQuestion();
-
+    showQuestion(0);
 }
-    
+
+function handleNextQuestion(params) {
+    showQuestion(1);
+}
+
 //start quiz button    
 start.addEventListener("click", rulesOpen);
 
@@ -32,17 +36,27 @@ start.addEventListener("click", rulesOpen);
 exitBtn.addEventListener("click", rulesClose);
 
 //continue quiz button
-startBtn.addEventListener("click", startQuestions)
+startBtn.addEventListener("click", startQuestions);
+
+//next quiz button
+nextQtn.addEventListener("click", handleNextQuestion);
+
+
 
 
 let que_count = 0;
 
 //get questions from the array instead
- function showQuestion() {
+ function showQuestion(index) {
     const que_text = document.querySelector(".que-text")
-    let que_tag = `<span> ${questionss[0].question} </span>`
-    // let option_tag = `<div><span>${questionss[index].options[0]}</span></div>` + `<div><span>${questionss[index].options[1]}</span></div>` + `<div><span>${questionss[index].options[2]}</span></div>` + `<div><span>${questionss[index].options[2]}</span></div>`
+    const optionList = document.querySelector(".option-list");
+    let que_tag = `<span> ${questionss[index].question} </span>`
+    let option_tag = `<div class="option"><span>${questionss[index].options[0]}</span></div>` 
+            + `<div class="option"><span>${questionss[index].options[1]}</span></div>` 
+            + `<div class="option"><span>${questionss[index].options[2]}</span></div>` 
+            + `<div class="option"><span>${questionss[index].options[3]}</span></div>`
     que_text.innerHTML = que_tag;
+    optionList.innerHTML = option_tag;
  }
 
 
