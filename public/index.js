@@ -27,8 +27,18 @@ function startQuestions() {
 }
 
 function handleNextQuestion(params) {
-    que_count++
-    showQuestion(que_count);
+    
+    if(que_count <= questionss.length - 2) {
+        que_count++
+        showQuestion(que_count);
+    } else {
+        console.log("Questions Completed");
+        
+    }
+
+    
+    
+
 }
 
 //start quiz button    
@@ -50,7 +60,7 @@ let que_count = 0;
  function showQuestion(index) {
     const que_text = document.querySelector(".que-text")
     const optionList = document.querySelector(".option-list");
-    let que_tag = `<span> ${questionss[index].question} </span>`
+    let que_tag = `<span>${questionss[index].no}. ${questionss[index].question} </span>`
     let option_tag = `<div class="option"><span>${questionss[index].options[0]}</span></div>` 
             + `<div class="option"><span>${questionss[index].options[1]}</span></div>` 
             + `<div class="option"><span>${questionss[index].options[2]}</span></div>` 
