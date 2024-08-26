@@ -17,7 +17,7 @@
         </button>
     </div>
 
-    <div class="center w-[33.75rem] bg-white text-black rounded-md hidden">
+    <div class="center w-[33.75rem] bg-white text-black rounded-md opacity-0 pointer-events-none -translate-x-1/2 -translate-y-1/2 scale-90">
 
         <div class="h-[3.75rem] w-full border-b-2 border-solid border-gray-200 flex items-center pl-9 font-semibold text-xl ">
             <span>Some Rules of this Quiz</span>
@@ -38,7 +38,7 @@
 
     </div>
 
-    <div class="center w-[34.375rem] bg-white rounded-md text-black hidden">
+    <div class="center w-[34.375rem] bg-white rounded-md text-black opacity-0 pointer-events-none -translate-x-1/2 -translate-y-1/2 scale-90">
         <header class=" relative z-50 h-[4.375rem] flex justify-between items-center px-8 bg-white rounded-t-md shadow-bt">
             <h1 class="text-xl font-medium">Awesome Quiz Application</h1>
             <div class="flex justify-between items-center w-[9.0625rem] bg-blue-200 p-2 rounded-md h-[2.8125rem] border-solid border-blue-100 border-2">
@@ -79,19 +79,20 @@
             <button class="bg-blue-600 text-white px-3 h-[40px] rounded-md border-solid border-[1px] border-blue-600 outline-none hover:bg-blue-500 transition-[ease] duration-[0.3s]">Next Questions</button>
         </footer>
     </div>
-        <div class="center bg-white text-black w-[450px] py-6 px-8 rounded-md flex flex-col items-center justify-between">
-            <div class="text-blue-600 text-[100px] mb-3">
-                <i class="fas fa-crown"></i>
-            </div>
-            <div class="font-medium text-xl">You've completed the Quiz!</div>
-            <div class="mb-8">
-                <span class="flex mt-3 text-[18px] font-medium">and sorry, you only got <p class="font-semibold px-1">2</p> out of <p class="font-semibold px-1">5</p> questions</span>
-            </div>
-            <div>
-                <button class="mx-1 h-10 w-[6.25rem] rounded-md  text-blue-600 text-base font-medium border-blue-600 border-solid border-2 hover:bg-blue-600 hover:text-white transition-all duration-[300ms] ease-[ease]">Exit Quiz</button>
-            <button class="mx-1 h-10 w-[6.25rem] rounded-md bg-blue-600 border-blue-600 text-white text-base font-medium border-transparent border-solid border-2 ">Continue</button>
-            </div>
+
+    <div class="center bg-white text-black w-[450px] py-6 px-8 rounded-md flex flex-col items-center justify-between opacity-0 pointer-events-none -translate-x-1/2 -translate-y-1/2 scale-90">
+        <div class="text-blue-600 text-[100px] mb-3">
+            <i class="fas fa-crown"></i>
         </div>
+        <div class="font-medium text-xl">You've completed the Quiz!</div>
+        <div class="mb-8">
+            <span class="flex mt-3 text-[18px] font-medium">and sorry, you only got <p class="font-semibold px-1">2</p> out of <p class="font-semibold px-1">5</p> questions</span>
+        </div>
+        <div>
+            <button class="mx-1 h-10 w-[120px] rounded-md bg-blue-600 border-blue-600 text-white text-base font-medium border-transparent border-solid border-2 ">Replay Quiz</button>
+            <button class="mx-1 h-10 w-[120px] rounded-md  text-blue-600 text-base font-medium border-blue-600 border-solid border-2 hover:bg-blue-600 hover:text-white transition-all duration-[300ms] ease-[ease]">Quit Quiz</button>
+        </div>
+    </div>
 
     
 </body>
