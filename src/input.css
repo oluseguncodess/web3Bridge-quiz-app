@@ -20,4 +20,8 @@
     .wrong {
         @apply bg-red-200 text-red-700 border-red-700
     }
+
+    .active {
+        @apply opacity-[1] pointer-events-none -translate-x-1/2 -translate-y-1/2 scale-100 z-[5]
+    }
   }
