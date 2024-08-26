@@ -3,6 +3,7 @@ const start = document.querySelector('.start');
 const rules = document.querySelector('.rules');
 const questions = document.querySelector('.questions');
 const result = document.querySelector('.result');
+const qtnNum = document.querySelector('.qtn-num')
 
 const startBtn = document.querySelector('.start-btn');
 const exitBtn = document.querySelector('.exitBtn');
@@ -26,7 +27,8 @@ function startQuestions() {
 }
 
 function handleNextQuestion(params) {
-    showQuestion(1);
+    que_count++
+    showQuestion(que_count);
 }
 
 //start quiz button    
@@ -40,8 +42,6 @@ startBtn.addEventListener("click", startQuestions);
 
 //next quiz button
 nextQtn.addEventListener("click", handleNextQuestion);
-
-
 
 
 let que_count = 0;
