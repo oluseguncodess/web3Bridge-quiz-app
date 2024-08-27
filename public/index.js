@@ -66,6 +66,29 @@ let que_count = 0;
             + `<div class="option option pointer-events-auto"><span>${questionss[index].options[3]}</span></div>`
     que_text.innerHTML = que_tag;
     optionList.innerHTML = option_tag;
+
+    const options = optionList.querySelectorAll(".option");
+    options.forEach(option => {
+        option.addEventListener("click", selectedOption);
+    });
+ }
+
+ function selectedOption(event) {
+    const optionSelected = event.currentTarget;
+    const optionSelectedText = optionSelected.textContent;
+
+    let correctAns = questionss[que_count].answer;
+
+    console.log(correctAns);
+    
+    if(optionSelectedText == correctAns) {
+        optionSelected.classList.add("correct");
+        optionSelected.classList.remove("option");
+    } else {
+        optionSelected.classList.add("wrong");
+        optionSelected.classList.remove("option");
+    }
+    
  }
 
 
@@ -76,7 +99,7 @@ let questionss = [
     {
         no: 1,
         question: `What is the correct syntax to print "Hello, World!" to the console in JavaScript?`,
-        answer:`console.log("Hello, World!")`,
+        answer:`console.log("Hello, World!");`,
         options: [
             `console.print("Hello, World!");`,
             `print.console("Hello, World!");`,
@@ -120,7 +143,7 @@ let questionss = [
     {
         no: 5,
         question: `What does the typeof operator do in JavaScript?`,
-        answer:` Determines the type of a variable`,
+        answer:`Determines the type of a variable`,
         options: [
             `Checks if a variable is defined`, 
             `Determines the type of a variable`,
