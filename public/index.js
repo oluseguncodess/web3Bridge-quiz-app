@@ -11,6 +11,9 @@ const nextQtn = document.querySelector('.next-qtn');
 const optionList = document.querySelector(".option-list");
 const optionChildren = optionList.children;
 
+const timeCount = document.querySelector(".timer");
+
+
 function rulesOpen() {
     rules.classList.remove("opacity-0");
     rules.classList.add("active");
@@ -26,6 +29,7 @@ function startQuestions() {
     questions.classList.remove("opacity-0");
     questions.classList.add("active");
     showQuestion(0);
+    startTimer(15)
 }
 
 function handleNextQuestion(params) {
@@ -33,6 +37,8 @@ function handleNextQuestion(params) {
     if(que_count <= questionss.length - 2) {
         que_count++
         showQuestion(que_count);
+        clearInterval(counter);
+        startTimer(timeValue)
     } else {
         console.log("Questions Completed");
     }
@@ -56,6 +62,8 @@ nextQtn.addEventListener("click", handleNextQuestion);
 
 
 let que_count = 0;
+let counter;
+let timeValue = 15;
 
 //get questions from the array instead
  function showQuestion(index) {
@@ -132,6 +140,13 @@ let que_count = 0;
     }
  }
 
+function startTimer(time) {
+    counter = setInterval(timer, 1000);
+    function timer() {
+        timeCount.textContent = time;
+        time--;
+    }
+}
 // <--***** QUESTIONS OBJECT DATABASE--*****-->
 // <--***** QUESTIONS OBJECT DATABASE--*****-->
 
