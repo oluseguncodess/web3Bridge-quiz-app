@@ -90,6 +90,8 @@ let timeValue = 15;
  let cross = `<div class="icon text-red-800 border-red-800"><i class="fas fa-times"></i></div>`;
 
  function selectedOption(event) {
+    clearInterval(counter)
+    
     const optionSelected = event.currentTarget;
     const optionSelectedText = optionSelected.textContent;
     const allOptions = optionList.children.length
