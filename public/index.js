@@ -67,16 +67,19 @@ function showResultBox() {
 
     const resultText = document.querySelector(".result-text");
     if(userScore > 3) {
-        let resultTag = `<span class="flex mt-3 text-[18px] font-medium">Great work 🥳, you got <p class="font-semibold px-1">${userScore}</p>out of<p class="font-semibold px-1">${questionss.length}</p>questions</span>`;
+        let resultTag = '<span class="flex mt-3 text-[14px] font-medium">Great work 🥳 , you got <p class="font-semibold px-[3px]">'+ userScore + '</p>out of<p class="font-semibold px-[3px]">' + questionss.length + '</p>questions</span>';
+
         resultText.innerHTML = resultTag; 
     } 
     else if(userScore < 1) {
-        let resultTag = `<span class="flex mt-3 text-[18px] font-medium">and sorry, you only got<p class="font-semibold px-1">${userScore}</p>out of<p class="font-semibold px-1>${questionss.length}</p>questions</span>`;
-        resultText.innerHTML = resultTag;
+        let resultTag = '<span class="flex mt-3 text-[18px] font-medium">Sorry but, you got <p class="font-semibold px-[3px]">'+ userScore + '</p>out of<p class="font-semibold px-[3px]">' + questionss.length + '</p>questions</span>';
+
+        resultText.innerHTML = resultTag; 
     }
     else {
-        let resultTag = `<span class="flex mt-3 text-[18px] font-medium">and nice attempt, you had<p class"font-semibold px-1">${userScore}</p>out of<p class="font-semibold px-1">${questionss.length}</p>questions</span>`;
-        resultText.innerHTML = resultTag
+        let resultTag = '<span class="flex mt-3 text-[18px] font-medium">Nice attempt, you got <p class="font-semibold px-[3px]">'+ userScore + '</p>out of<p class="font-semibold px-[3px]">' + questionss.length + '</p>questions</span>';
+
+        resultText.innerHTML = resultTag;
     }
 }
 
@@ -277,7 +280,7 @@ let questionss = [
             `Converts a variable to a specific type`,
             `Creates a new variable of a specified type`
         ]
-    },
+     },
     {
         no: 6,
         question: `What is the difference between var, let and const`,
@@ -353,6 +356,72 @@ let questionss = [
             `A function that executes repeatedly`,
             `A conditional statement`,
             `A way to repeat code`
+        ]
+    },
+    {
+        no: 13,
+        question: `How do write a 'for' loop in Javascript?`,
+        answer:`loop (i = 0; i < 10; i++) { }`,
+        options: [
+            `loop (i = 0; i < 10; i++) { }`, 
+            `loop (i = 0; i < 10; i++) { }`,
+            `for (i < 10; i++) { }`,
+            `repeat (i = 0; i < 10; i++) { }`
+        ]
+    },
+    {
+        no: 14,
+        question: `What is a while loop?`,
+        answer:`A loop that executes a block of code as long as a condition is true`,
+        options: [
+            `A loop that executes a block of code as long as a condition is true`, 
+            `A loop that executes a block of code a fixed number of times`,
+            `A loop that runs indefinitely`,
+            `A function that calls itself`
+        ]
+    },
+    {
+        no: 15,
+        question: `What is a do...while loop?`,
+        answer:`A loop that executes code at least once, then repeats as long as a condition is true`,
+        options: [
+            `A loop that executes code zero or more times`, 
+            `A loop that executes code at least once, then repeats as long as a condition is true`,
+            `A loop that executes code based on user input`,
+            `A loop that is used for recursion`
+        ]
+    },
+    {
+        no: 16,
+        question: `What are JavaScript conditional statements?`,
+        answer:`Statements that perform actions based on conditions`,
+        options: [
+            `Statements that declare variables`, 
+            `Statements that define functions`,
+            `Statements that perform actions based on conditions`,
+            `Statements that loop through data`
+        ]
+    },
+    {
+        no: 17,
+        question: `How do you write an if statement in JavaScript?`,
+        answer:`if (condition) { }`,
+        options: [
+            `if (condition) { }`, 
+            `if condition { }`,
+            `check (condition) { }`,
+            `if (condition) then { }`
+        ]
+    },
+    {
+        no: 18,
+        question: `What is the purpose of the switch statement?`,
+        answer:`To execute code based on multiple conditions`,
+        options: [
+            ` To define new functions`, 
+            `To perform an action based on a condition`,
+            `To loop through values`,
+            `To execute code based on multiple conditions`
         ]
     }
 ];
