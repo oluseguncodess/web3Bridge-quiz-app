@@ -3,11 +3,13 @@ const start = document.querySelector('.start');
 const rules = document.querySelector('.rules');
 const questions = document.querySelector('.questions');
 const result = document.querySelector('.result');
-const bottomCounter = document.querySelector('.bottom-counter')
+const bottomCounter = document.querySelector('.bottom-counter');
 
 const startBtn = document.querySelector('.start-btn');
 const exitBtn = document.querySelector('.exitBtn');
 const nextQtn = document.querySelector('.next-qtn');
+const optionList = document.querySelector(".option-list");
+const optionChildren = optionList.children;
 
 function rulesOpen() {
     rules.classList.remove("opacity-0");
@@ -58,12 +60,14 @@ let que_count = 0;
 //get questions from the array instead
  function showQuestion(index) {
     const que_text = document.querySelector(".que-text")
-    const optionList = document.querySelector(".option-list");
-    let que_tag = `<span>${questionss[index].no}. ${questionss[index].question} </span>`
+
+    let que_tag = `<span>${questionss[index].no}. ${questionss[index].question} </span>`;
+
     let option_tag = `<div class="option option pointer-events-auto"><span>${questionss[index].options[0]}</span></div>` 
             + `<div class="option pointer-events-auto"><span>${questionss[index].options[1]}</span></div>` 
             + `<div class="option option pointer-events-auto"><span>${questionss[index].options[2]}</span></div>` 
-            + `<div class="option option pointer-events-auto"><span>${questionss[index].options[3]}</span></div>`
+            + `<div class="option option pointer-events-auto"><span>${questionss[index].options[3]}</span></div>`;
+
     que_text.innerHTML = que_tag;
     optionList.innerHTML = option_tag;
 
@@ -76,21 +80,43 @@ let que_count = 0;
  function selectedOption(event) {
     const optionSelected = event.currentTarget;
     const optionSelectedText = optionSelected.textContent;
-
+    const allOptions = optionList.children.length
     let correctAns = questionss[que_count].answer;
-
-    console.log(correctAns);
     
     if(optionSelectedText == correctAns) {
         optionSelected.classList.add("correct");
+        optionSelected.classList.add("selected");
         optionSelected.classList.remove("option");
+
     } else {
         optionSelected.classList.add("wrong");
+        optionSelected.classList.add("selected");
         optionSelected.classList.remove("option");
-    }
-    
- }
 
+        //highlight the right answer 
+        // for (let i = 0; i < allOptions; i++) {
+        //     if(child)
+        // }
+
+    }
+
+    //once a button has been picked, otilo
+    
+
+    for (let i = 0; i < allOptions; i++) {
+       
+        const child = optionChildren[i];
+
+        if(!child.hasAttribute("selected")) {
+           child.classList.add("disabled");
+           child.classList.remove("pointer-events-auto");
+        }
+
+        if(child.hasAttribute("selected")) {
+            child.classList.add("pointer-events-auto");
+        }
+    }
+ }
 
 // <--***** QUESTIONS OBJECT DATABASE--*****-->
 // <--***** QUESTIONS OBJECT DATABASE--*****-->
@@ -151,10 +177,4 @@ let questionss = [
             `Creates a new variable of a specified type`
         ]
     }
-]
-
-
-
-
-
-
+];

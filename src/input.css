@@ -14,11 +14,11 @@
     }
 
     .correct {
-        @apply bg-blue-100 border-[1px] border-solid hover:border-green-300 border-blue-300 rounded-md py-3 px-4 mb-4 flex items-center justify-between cursor-pointer hover:bg-green-500 hover:text-white
+        @apply border-[1px] border-solid hover:border-green-300 border-blue-300 rounded-md py-3 px-4 mb-4 flex items-center justify-between cursor-pointer bg-green-500 text-white
     }
 
     .wrong {
-        @apply  bg-blue-100 border-[1px] border-solid hover:border-red-300 border-blue-300 rounded-md py-3 px-4 mb-4 flex items-center justify-between cursor-pointer hover:bg-red-500 hover:text-white
+        @apply border-[1px] border-solid hover:border-red-300 border-blue-300 rounded-md py-3 px-4 mb-4 flex items-center justify-between cursor-pointer bg-red-500 text-white
     }
 
     .active {
@@ -27,5 +27,9 @@
 
     .option {
         @apply bg-blue-100 border-[1px] border-solid border-blue-300 rounded-md py-3 px-4 mb-4 flex items-center justify-between cursor-pointer hover:bg-blue-500 hover:text-white
+    }
+
+    .disabled {
+        pointer-events: none;
     }
   }
