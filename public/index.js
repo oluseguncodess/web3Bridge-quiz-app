@@ -4,6 +4,8 @@ const rules = document.querySelector('.rules');
 const questions = document.querySelector('.questions');
 const result = document.querySelector('.result');
 const bottomCounter = document.querySelector('.bottom-counter');
+const restart = document.querySelector(".restart");
+const quit = document.querySelector(".quit");
 
 const startBtn = document.querySelector('.start-btn');
 const exitBtn = document.querySelector('.exitBtn');
@@ -19,6 +21,7 @@ let counter;
 let timeValue = 15;
 let counterLine = 0;
 let widthValue = 0;
+let userScore = 0;
 
 function rulesOpen() {
     rules.classList.remove("opacity-0");
@@ -39,6 +42,28 @@ function startQuestions() {
     startTimerLine(0)
 }
 
+function showResultBox() {
+    questions.classList.add("opacity-0");
+    questions.classList.remove("active");
+
+    result.classList.remove("opacity-0");
+    result.classList.add("active");
+
+    const resultText = document.querySelector(".result-text");
+    if(userScore > 3) {
+        let resultTag = `<span class="flex mt-3 text-[18px] font-medium">Great work 🥳, you got <p class="font-semibold px-1">${userScore}</p> out of <p class="font-semibold px-1">${questionss.length}</p> questions</span>`
+        resultText.innerHTML = resultTag; 
+    } 
+    else if(userScore < 1) {
+        let resultTag = `<span class="flex mt-3 text-[18px] font-medium">and sorry, you only got <p class="font-semibold px-1">${userScore}</p>out of <p class="font-semibold px-1">5</p>questions</span>`;
+        resultText.innerHTML = resultTag;
+    }
+    else {
+        let resultTag = `<span class="flex mt-3 text-[18px] font-medium">and nice attempt, you had <p class"font-semibold px-1">${userScore}</p>out of<p class="font-semibold px-1">${questionss.length}</p>questions</span>`
+        resultText.innerHTML = resultTag
+    }
+}
+
 function handleNextQuestion(params) {
     
     if(que_count <= questionss.length - 2) {
@@ -50,6 +75,7 @@ function handleNextQuestion(params) {
         startTimerLine(widthValue);
     } else {
         console.log("Questions Completed");
+        showResultBox()
     }
 
     let bottom_number_counter = `<span class="flex select-none"><p class="font-medium pr-1">${que_count+1}</p>Of<p class="font-medium px-1">5</p>Questions</span>`
@@ -103,6 +129,7 @@ nextQtn.addEventListener("click", handleNextQuestion);
     let correctAns = questionss[que_count].answer;
     
     if(optionSelectedText == correctAns) {
+        userScore ++;
         optionSelected.classList.add("correct");
         optionSelected.classList.add("selected");
         optionSelected.classList.remove("option");
@@ -126,12 +153,9 @@ nextQtn.addEventListener("click", handleNextQuestion);
                 childd.insertAdjacentHTML('beforeend', tick)          
             }
         }
-
     }
 
     //once a button has been picked, otilo
-    
-
     for (let i = 0; i < allOptions; i++) {
        
         const child = optionChildren[i];
