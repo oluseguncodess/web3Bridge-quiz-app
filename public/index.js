@@ -12,7 +12,13 @@ const optionList = document.querySelector(".option-list");
 const optionChildren = optionList.children;
 
 const timeCount = document.querySelector(".timer");
+const timeLine = document.querySelector(".time-line")
 
+let que_count = 0;
+let counter;
+let timeValue = 15;
+let counterLine = 0;
+let widthValue = 0;
 
 function rulesOpen() {
     rules.classList.remove("opacity-0");
@@ -30,6 +36,7 @@ function startQuestions() {
     questions.classList.add("active");
     showQuestion(0);
     startTimer(15)
+    startTimerLine(0)
 }
 
 function handleNextQuestion(params) {
@@ -38,7 +45,9 @@ function handleNextQuestion(params) {
         que_count++
         showQuestion(que_count);
         clearInterval(counter);
-        startTimer(timeValue)
+        startTimer(timeValue);
+        clearInterval(counterLine);
+        startTimerLine(widthValue);
     } else {
         console.log("Questions Completed");
     }
@@ -60,10 +69,6 @@ startBtn.addEventListener("click", startQuestions);
 //next quiz button
 nextQtn.addEventListener("click", handleNextQuestion);
 
-
-let que_count = 0;
-let counter;
-let timeValue = 15;
 
 //get questions from the array instead
  function showQuestion(index) {
@@ -91,7 +96,7 @@ let timeValue = 15;
 
  function selectedOption(event) {
     clearInterval(counter)
-    
+    clearInterval(counterLine)
     const optionSelected = event.currentTarget;
     const optionSelectedText = optionSelected.textContent;
     const allOptions = optionList.children.length
@@ -147,6 +152,26 @@ function startTimer(time) {
     function timer() {
         timeCount.textContent = time;
         time--;
+        if(time < 9) {
+             let addZero = timeCount.textContent;
+             timeCount.textContent= "0" + addZero;
+        } 
+
+        if(time < 0) {
+            clearInterval(counter)
+        }
+    } 
+}
+
+function startTimerLine(time) {
+    counterLine = setInterval(timer, 29) 
+    function timer() {
+        time ++;
+        timeLine.style.width = time + "px";
+        if(time > 549) {
+            clearInterval(counterLine)
+        }
+        
     }
 }
 // <--***** QUESTIONS OBJECT DATABASE--*****-->

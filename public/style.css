@@ -677,8 +677,20 @@ video {
   pointer-events: auto;
 }
 
+.absolute{
+  position: absolute;
+}
+
 .relative{
   position: relative;
+}
+
+.bottom-0{
+  bottom: 0px;
+}
+
+.left-0{
+  left: 0px;
 }
 
 .z-50{
@@ -746,6 +758,26 @@ video {
 
 .h-\[60px\]{
   height: 60px;
+}
+
+.h-\[50px\]{
+  height: 50px;
+}
+
+.h-\[5px\]{
+  height: 5px;
+}
+
+.h-\[15px\]{
+  height: 15px;
+}
+
+.h-\[35px\]{
+  height: 35px;
+}
+
+.h-\[3px\]{
+  height: 3px;
 }
 
 .w-\[120px\]{
@@ -923,6 +955,11 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-red-700{
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
 
 .p-2{
