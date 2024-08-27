@@ -93,10 +93,16 @@ let que_count = 0;
         optionSelected.classList.add("selected");
         optionSelected.classList.remove("option");
 
-        //highlight the right answer 
-        // for (let i = 0; i < allOptions; i++) {
-        //     if(child)
-        // }
+        // highlight the right answer 
+
+        
+        for (let i = 0; i < allOptions; i++) {
+            let childd = optionChildren[i];
+
+            if(childd.textContent == correctAns) {
+                childd.classList.add("correct");
+                childd.classList.remove("option");            }
+        }
 
     }
 
