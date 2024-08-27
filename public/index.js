@@ -16,6 +16,18 @@ const optionChildren = optionList.children;
 const timeCount = document.querySelector(".timer");
 const timeLine = document.querySelector(".time-line")
 
+quit.addEventListener("click", overAgain)
+
+function overAgain() {
+    window.location.reload();
+}
+
+restart.addEventListener("click", playAgain);
+
+function playAgain() {
+    window.location.reload();
+}
+
 let que_count = 0;
 let counter;
 let timeValue = 15;
@@ -51,15 +63,15 @@ function showResultBox() {
 
     const resultText = document.querySelector(".result-text");
     if(userScore > 3) {
-        let resultTag = `<span class="flex mt-3 text-[18px] font-medium">Great work 🥳, you got <p class="font-semibold px-1">${userScore}</p> out of <p class="font-semibold px-1">${questionss.length}</p> questions</span>`
+        let resultTag = `<span class="flex mt-3 text-[18px] font-medium">Great work 🥳, you got <p class="font-semibold px-1">${userScore}</p>out of<p class="font-semibold px-1">${questionss.length}</p>questions</span>`;
         resultText.innerHTML = resultTag; 
     } 
     else if(userScore < 1) {
-        let resultTag = `<span class="flex mt-3 text-[18px] font-medium">and sorry, you only got <p class="font-semibold px-1">${userScore}</p>out of <p class="font-semibold px-1">5</p>questions</span>`;
+        let resultTag = `<span class="flex mt-3 text-[18px] font-medium">and sorry, you only got<p class="font-semibold px-1">${userScore}</p>out of<p class="font-semibold px-1>${questionss.length}</p>questions</span>`;
         resultText.innerHTML = resultTag;
     }
     else {
-        let resultTag = `<span class="flex mt-3 text-[18px] font-medium">and nice attempt, you had <p class"font-semibold px-1">${userScore}</p>out of<p class="font-semibold px-1">${questionss.length}</p>questions</span>`
+        let resultTag = `<span class="flex mt-3 text-[18px] font-medium">and nice attempt, you had<p class"font-semibold px-1">${userScore}</p>out of<p class="font-semibold px-1">${questionss.length}</p>questions</span>`;
         resultText.innerHTML = resultTag
     }
 }
