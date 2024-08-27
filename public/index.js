@@ -60,10 +60,10 @@ let que_count = 0;
     const que_text = document.querySelector(".que-text")
     const optionList = document.querySelector(".option-list");
     let que_tag = `<span>${questionss[index].no}. ${questionss[index].question} </span>`
-    let option_tag = `<div class="option"><span>${questionss[index].options[0]}</span></div>` 
-            + `<div class="option"><span>${questionss[index].options[1]}</span></div>` 
-            + `<div class="option"><span>${questionss[index].options[2]}</span></div>` 
-            + `<div class="option"><span>${questionss[index].options[3]}</span></div>`
+    let option_tag = `<div class="option option pointer-events-auto"><span>${questionss[index].options[0]}</span></div>` 
+            + `<div class="option pointer-events-auto"><span>${questionss[index].options[1]}</span></div>` 
+            + `<div class="option option pointer-events-auto"><span>${questionss[index].options[2]}</span></div>` 
+            + `<div class="option option pointer-events-auto"><span>${questionss[index].options[3]}</span></div>`
     que_text.innerHTML = que_tag;
     optionList.innerHTML = option_tag;
  }
