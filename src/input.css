@@ -22,7 +22,7 @@
     }
 
     .active {
-        @apply opacity-[1] pointer-events-none -translate-x-1/2 -translate-y-1/2 scale-100 z-[5]
+        @apply opacity-[1] -translate-x-1/2 -translate-y-1/2 scale-100
     }
 
     .option {

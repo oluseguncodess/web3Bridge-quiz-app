@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="./style.css">
     <title>Quiz App</title>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-black text-white">
@@ -18,67 +16,43 @@
     </div>
 
     <div class="rules center w-[33.75rem] bg-white text-black rounded-md opacity-0 pointer-events-none -translate-x-1/2 -translate-y-1/2 scale-90">
-
         <div class="h-[3.75rem] w-full border-b-2 border-solid border-gray-200 flex items-center pl-9 font-semibold text-xl ">
             <span>Some Rules of this Quiz</span>
         </div>
-
         <div class="py-4 px-9">
             <div class="my-2 mx-0 text-base">1. You will only have <span class="font-semibold text-blue-500">15 seconds</span> per each question.</div>
             <div class="my-2 mx-0 text-base">2. Once you select your answer, you can't reselect.</div>
             <div class="my-2 mx-0 text-base">3. You can't select any option once time goes off</div>
             <div class="my-2 mx-0 text-base">4. You can't exit from the Quiz while you're playing</div>
-            <div class="my-2 mx-0 text-base">5. You'll get points on the basis of your corrent answers.</div>
+            <div class="my-2 mx-0 text-base">5. You'll get points on the basis of your correct answers.</div>
         </div>
-        
         <div class="h-[3.75rem] flex justify-end items-center pr-8 gap-7 border-t-2 border-solid border-gray-200">
-                <button class="exitBtn h-10 w-[6.25rem] rounded-md  text-blue-600 text-base font-medium border-blue-600 border-solid border-2 hover:bg-blue-600 hover:text-white transition-all duration-[300ms] ease-[ease] pointer-events-auto">Exit Quiz</button>
-            
-            
-            <button class="start-btn mx-1 h-10 w-[6.25rem] rounded-md bg-blue-600 border-blue-600 text-white text-base font-medium border-transparent border-solid border-2 pointer-events-auto">Continue</button>
+            <button class="exitBtn h-10 w-[6.25rem] rounded-md text-blue-600 text-base font-medium border-blue-600 border-solid border-2 hover:bg-blue-600 hover:text-white transition-all duration-[300ms] ease-[ease]">Exit Quiz</button>
+            <button class="start-btn mx-1 h-10 w-[6.25rem] rounded-md bg-blue-600 border-blue-600 text-white text-base font-medium border-transparent border-solid border-2">Continue</button>
         </div>
-
     </div>
 
     <div class="questions center w-[34.375rem] bg-white rounded-md text-black opacity-0 pointer-events-none -translate-x-1/2 -translate-y-1/2 scale-90">
-        <header class=" relative z-50 h-[4.375rem] flex justify-between items-center px-8 bg-white rounded-t-md shadow-bt">
+        <header class="relative z-50 h-[4.375rem] flex justify-between items-center px-8 bg-white rounded-t-md shadow-bt">
             <h1 class="text-xl font-medium">Awesome Quiz Application</h1>
             <div class="flex justify-between items-center w-[9.0625rem] bg-blue-200 p-2 rounded-md h-[2.8125rem] border-solid border-blue-100 border-2">
                 <div class="font-normal text-base select-none">Time Left</div>
                 <div class="text-lg font-medium bg-gray-700 text-white w-[2.8125rem] h-[1.875rem] text-center rounded-md leading-[1.875rem] border-solid border-[1px] border-gray-400 select-none">15</div>
             </div>
         </header>
-
         <section class="pt-6 px-8 pb-5 bg-white">
             <div class="text-2xl font-semibold que-text">
-                <span>What is the correct syntax to print "Hello World" in the console?</span>
+                <!-- Question text will be inserted here by JavaScript -->
             </div>
-
             <div class="pt-6 block option-list">
-                <div class="option">
-                    <span>console.log("Hello World");</span>
-                    <div class="icon correct"><i class="fas fa-check "></i></div>
-                </div>
-                <div class="option">
-                    <span>print("Hello World");</span>
-                    <div class="icon wrong"><i class="fas fa-times"></i></div>
-                </div>
-                <div class="option">
-                    <span>echo("Hello World");</span>
-                    <div class="icon wrong"><i class="fas fa-times"></i></div>
-                </div>
-                <div class="option">
-                    <span>console.print("Hello World");</span>
-                    <div class="icon wrong"><i class="fas fa-times"></i></div>
-                </div>
+                <!-- Options will be inserted here by JavaScript -->
             </div>
         </section>
-
         <footer class="flex justify-between items-center h-[60px] w-full px-8">
             <div class="bottom-counter">
-                <span class="flex select-none"><p class="font-medium pr-1">1</p>Of<p class="font-medium px-1">5</p>Questions</span>
+                <!-- Counter text will be inserted here by JavaScript -->
             </div>
-            <button class="next-qtn bg-blue-600 text-white px-3 h-[40px] rounded-md border-solid border-[1px] border-blue-600 outline-none hover:bg-blue-500 transition-[ease] duration-[0.3s] pointer-events-auto">Next Questions</button>
+            <button class="next-qtn bg-blue-600 text-white px-3 h-[40px] rounded-md border-solid border-[1px] border-blue-600 outline-none hover:bg-blue-500 transition-[ease] duration-[0.3s]">Next Question</button>
         </footer>
     </div>
 
@@ -91,8 +65,8 @@
             <span class="flex mt-3 text-[18px] font-medium">and sorry, you only got <p class="font-semibold px-1">2</p> out of <p class="font-semibold px-1">5</p> questions</span>
         </div>
         <div>
-            <button class="mx-1 h-10 w-[120px] rounded-md bg-blue-600 border-blue-600 text-white text-base font-medium border-transparent border-solid border-2 ">Replay Quiz</button>
-            <button class="mx-1 h-10 w-[120px] rounded-md  text-blue-600 text-base font-medium border-blue-600 border-solid border-2 hover:bg-blue-600 hover:text-white transition-all duration-[300ms] ease-[ease]">Quit Quiz</button>
+            <button class="mx-1 h-10 w-[120px] rounded-md bg-blue-600 border-blue-600 text-white text-base font-medium border-transparent border-solid border-2">Replay Quiz</button>
+            <button class="mx-1 h-10 w-[120px] rounded-md text-blue-600 text-base font-medium border-blue-600 border-solid border-2 hover:bg-blue-600 hover:text-white transition-all duration-[300ms] ease-[ease]">Quit Quiz</button>
         </div>
     </div>
 
