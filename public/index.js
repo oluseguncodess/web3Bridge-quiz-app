@@ -77,6 +77,10 @@ let que_count = 0;
     });
  }
 
+ let tick = `<div class="icon text-green-800 border-green-800 "><i class="fas fa-check "></i></div>`;
+
+ let cross = `<div class="icon text-red-800 border-red-800"><i class="fas fa-times"></i></div>`;
+
  function selectedOption(event) {
     const optionSelected = event.currentTarget;
     const optionSelectedText = optionSelected.textContent;
@@ -87,21 +91,25 @@ let que_count = 0;
         optionSelected.classList.add("correct");
         optionSelected.classList.add("selected");
         optionSelected.classList.remove("option");
+        optionSelected.insertAdjacentHTML('beforeend', tick)
+       
 
     } else {
         optionSelected.classList.add("wrong");
         optionSelected.classList.add("selected");
         optionSelected.classList.remove("option");
+        optionSelected.insertAdjacentHTML('beforeend', cross)
 
         // highlight the right answer 
 
-        
         for (let i = 0; i < allOptions; i++) {
             let childd = optionChildren[i];
 
             if(childd.textContent == correctAns) {
                 childd.classList.add("correct");
-                childd.classList.remove("option");            }
+                childd.classList.remove("option");  
+                childd.insertAdjacentHTML('beforeend', tick)          
+            }
         }
 
     }
