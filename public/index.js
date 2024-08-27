@@ -49,9 +49,13 @@ function startQuestions() {
     rulesClose();
     questions.classList.remove("opacity-0");
     questions.classList.add("active");
-    showQuestion(0);
+    showQuestion(que_count);
     startTimer(15)
     startTimerLine(0)
+
+    let bottom_number_counter = `<span class="flex select-none"><p class="font-medium pr-1">${que_count+1}</p>Of<p class="font-medium px-1">${questionss.length}</p>Questions</span>`
+
+    bottomCounter.innerHTML = bottom_number_counter;
 }
 
 function showResultBox() {
@@ -90,7 +94,7 @@ function handleNextQuestion(params) {
         showResultBox()
     }
 
-    let bottom_number_counter = `<span class="flex select-none"><p class="font-medium pr-1">${que_count+1}</p>Of<p class="font-medium px-1">5</p>Questions</span>`
+     let bottom_number_counter = `<span class="flex select-none"><p class="font-medium pr-1">${que_count+1}</p>Of<p class="font-medium px-1">${questionss.length}</p>Questions</span>`
 
     bottomCounter.innerHTML = bottom_number_counter;
 }
@@ -110,6 +114,7 @@ nextQtn.addEventListener("click", handleNextQuestion);
 
 //get questions from the array instead
  function showQuestion(index) {
+    
     const que_text = document.querySelector(".que-text")
 
     let que_tag = `<span>${questionss[index].no}. ${questionss[index].question} </span>`;
@@ -196,6 +201,10 @@ function startTimer(time) {
         if(time < 0) {
             clearInterval(counter)
         }
+
+        if(time == 0) {
+            handleNextQuestion()
+        }
     } 
 }
 
@@ -267,6 +276,83 @@ let questionss = [
             `Determines the type of a variable`,
             `Converts a variable to a specific type`,
             `Creates a new variable of a specified type`
+        ]
+    },
+    {
+        no: 6,
+        question: `What is the difference between var, let and const`,
+        answer:`var is function-scoped, let and const are blocked-scoped`,
+        options: [
+            `var is blocked-scoped, let and const are function scoped`, 
+            `var is function-scoped, let and const are blocked-scoped`,
+            `They are all scoped`,
+            `They aren't scoped at all`
+        ]
+    },
+    {
+        no: 7,
+        question: `What are data types in JavaScript?`,
+        answer:`String, Number, Boolean, Object, Undefined, Null, Symbol`,
+        options: [
+            `String, Integer, Boolean, Character`, 
+            `String, Number, Boolean, Object, Undefined, Null, Symbol`,
+            `String, Float, Boolean, Object`,
+            `Integer, Boolean, Array, Function`
+        ]
+    },
+    {
+        no: 8,
+        question: `What are JavaScript arrays?`,
+        answer:`Ordered collections of values`,
+        options: [
+            `Lists of key-value pairs`, 
+            `Collections of elements with a fixed size`,
+            `Ordered collections of values`,
+            `A type of object with a single value`
+        ]
+    },
+    {
+        no: 9,
+        question: `How do you access elements in an array?`,
+        answer:`By index`,
+        options: [
+            `By index`, 
+            `By key`,
+            `By value`,
+            `By property name`
+        ]
+    },
+    {
+        no: 10,
+        question: `What is a JavaScript object?`,
+        answer:`A collection of key-value pairs`,
+        options: [
+            `A primitive data type`, 
+            `A list of functions`,
+            `A collection of key-value pairs`,
+            `An ordered collection of values`
+        ]
+    },
+    {
+        no: 11,
+        question: `How do you add a property to an object?`,
+        answer:`object.property = value;`,
+        options: [
+            `object.property = value;`, 
+            `object.addProperty(property, value);`,
+            `object.set(property, value);`,
+            `object.insert(property, value);`
+        ]
+    },
+    {
+        no: 12,
+        question: `What is a JavaScript loop`,
+        answer:`A way to repeat code`,
+        options: [
+            `A method to iterate over arrays`, 
+            `A function that executes repeatedly`,
+            `A conditional statement`,
+            `A way to repeat code`
         ]
     }
 ];
