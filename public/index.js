@@ -191,6 +191,7 @@ nextQtn.addEventListener("click", handleNextQuestion);
     }
  }
 
+
 function startTimer(time) {
     counter = setInterval(timer, 1000);
     function timer() {
@@ -225,214 +226,47 @@ function startTimerLine(time) {
 // <--***** QUESTIONS OBJECT DATABASE--*****-->
 // <--***** QUESTIONS OBJECT DATABASE--*****-->
 
-let questionss = [
-    {
-        no: 1,
-        question: `What is the correct syntax to print "Hello, World!" to the console in JavaScript?`,
-        answer:`console.log("Hello, World!");`,
-        options: [
-            `console.print("Hello, World!");`,
-            `print.console("Hello, World!");`,
-            `console.log("Hello, World!");`,
-            `log.console("Hello, World!");`
-        ]
-    },
-    {
-        no: 2,
-        question: `How do you declare a variable in JavaScript ES5?`,
-        answer:`let myVariable;`,
-        options: [
-            `variable myVariable;`,
-            `var myVariable;`,
-            `declare myVariable;`,
-            `let myVariable;`
-        ]
-    },
-    {
-        no: 3,
-        question: `Which operator is used to compare two values for strict equality in JavaScript?`,
-        answer:`===`,
-        options: [
-            `===`,
-            `==`,
-            `!=`,
-            `!==`
-        ]
-    },
-    {
-        no: 4,
-        question: `How do you create a function in JavaScript?`,
-        answer:`function myFunction() {}`,
-        options: [
-            `create function myFunction() {}`,
-            `function myFunction() {}`,
-            `func myFunction() {}`,
-            `def myFunction() {}`
-        ]
-    },
-    {
-        no: 5,
-        question: `What does the typeof operator do in JavaScript?`,
-        answer:`Determines the type of a variable`,
-        options: [
-            `Checks if a variable is defined`, 
-            `Determines the type of a variable`,
-            `Converts a variable to a specific type`,
-            `Creates a new variable of a specified type`
-        ]
-     },
-    {
-        no: 6,
-        question: `What is the difference between var, let and const`,
-        answer:`var is function-scoped, let and const are blocked-scoped`,
-        options: [
-            `var is blocked-scoped, let and const are function scoped`, 
-            `var is function-scoped, let and const are blocked-scoped`,
-            `They are all scoped`,
-            `They aren't scoped at all`
-        ]
-    },
-    {
-        no: 7,
-        question: `What are data types in JavaScript?`,
-        answer:`String, Number, Boolean, Object, Undefined, Null, Symbol`,
-        options: [
-            `String, Integer, Boolean, Character`, 
-            `String, Number, Boolean, Object, Undefined, Null, Symbol`,
-            `String, Float, Boolean, Object`,
-            `Integer, Boolean, Array, Function`
-        ]
-    },
-    {
-        no: 8,
-        question: `What are JavaScript arrays?`,
-        answer:`Ordered collections of values`,
-        options: [
-            `Lists of key-value pairs`, 
-            `Collections of elements with a fixed size`,
-            `Ordered collections of values`,
-            `A type of object with a single value`
-        ]
-    },
-    {
-        no: 9,
-        question: `How do you access elements in an array?`,
-        answer:`By index`,
-        options: [
-            `By index`, 
-            `By key`,
-            `By value`,
-            `By property name`
-        ]
-    },
-    {
-        no: 10,
-        question: `What is a JavaScript object?`,
-        answer:`A collection of key-value pairs`,
-        options: [
-            `A primitive data type`, 
-            `A list of functions`,
-            `A collection of key-value pairs`,
-            `An ordered collection of values`
-        ]
-    },
-    {
-        no: 11,
-        question: `How do you add a property to an object?`,
-        answer:`object.property = value;`,
-        options: [
-            `object.property = value;`, 
-            `object.addProperty(property, value);`,
-            `object.set(property, value);`,
-            `object.insert(property, value);`
-        ]
-    },
-    {
-        no: 12,
-        question: `What is a JavaScript loop`,
-        answer:`A way to repeat code`,
-        options: [
-            `A method to iterate over arrays`, 
-            `A function that executes repeatedly`,
-            `A conditional statement`,
-            `A way to repeat code`
-        ]
-    },
-    {
-        no: 13,
-        question: `How do write a 'for' loop in Javascript?`,
-        answer:`loop (i = 0; i < 10; i++) { }`,
-        options: [
-            `loop (i = 0; i < 10; i++) { }`, 
-            `loop (i = 0; i < 10; i++) { }`,
-            `for (i < 10; i++) { }`,
-            `repeat (i = 0; i < 10; i++) { }`
-        ]
-    },
-    {
-        no: 14,
-        question: `What is a while loop?`,
-        answer:`A loop that executes a block of code as long as a condition is true`,
-        options: [
-            `A loop that executes a block of code as long as a condition is true`, 
-            `A loop that executes a block of code a fixed number of times`,
-            `A loop that runs indefinitely`,
-            `A function that calls itself`
-        ]
-    },
-    {
-        no: 15,
-        question: `What is a do...while loop?`,
-        answer:`A loop that executes code at least once, then repeats as long as a condition is true`,
-        options: [
-            `A loop that executes code zero or more times`, 
-            `A loop that executes code at least once, then repeats as long as a condition is true`,
-            `A loop that executes code based on user input`,
-            `A loop that is used for recursion`
-        ]
-    },
-    {
-        no: 16,
-        question: `What are JavaScript conditional statements?`,
-        answer:`Statements that perform actions based on conditions`,
-        options: [
-            `Statements that declare variables`, 
-            `Statements that define functions`,
-            `Statements that perform actions based on conditions`,
-            `Statements that loop through data`
-        ]
-    },
-    {
-        no: 17,
-        question: `How do you write an if statement in JavaScript?`,
-        answer:`if (condition) { }`,
-        options: [
-            `if (condition) { }`, 
-            `if condition { }`,
-            `check (condition) { }`,
-            `if (condition) then { }`
-        ]
-    },
-    {
-        no: 18,
-        question: `What is the purpose of the switch statement?`,
-        answer:`To execute code based on multiple conditions`,
-        options: [
-            ` To define new functions`, 
-            `To perform an action based on a condition`,
-            `To loop through values`,
-            `To execute code based on multiple conditions`
-        ]
-    },
-    {
-        no: 19,
-        question: `What is the purpose of the switch statement?`,
-        answer:`To execute code based on multiple conditions`,
-        options: [
-            ` To define new functions`, 
-            `To perform an action based on a condition`,
-            `To loop through values`,
-            `To execute code based on multiple conditions`
-        ]
-    }
-];
+function Questions(no, question, answer, options) {
+    this.no = no;
+    this.question = question;
+    this.answer = answer;
+    this.options = options;
+}
+
+const q1 = new Questions(1, `What is the correct syntax to print "Hello, World!" to the console in JavaScript?`, `console.log("Hello, World!");`, [`console.print("Hello, World!");`, `print.console("Hello, World!");`, `console.log("Hello, World!");`, `log.console("Hello, World!");`]);
+
+const q2 = new Questions(2, `How do you declare a variable in JavaScript ES5?`, `let myVariable;`, [`variable myVariable;`, `var myVariable;`, `declare myVariable;`, `let myVariable;`]);
+
+const q3 = new Questions(3, `Which operator is used to compare two values for strict equality in JavaScript?`, `===`, [`===`, `==`, `!=`, `!==`]);
+
+const q4 = new Questions(4, `How do you create a function in JavaScript?`, `function myFunction() {}`, [`create function myFunction() {}`, `function myFunction() {}`, `func myFunction() {}`, `def myFunction() {}`]);
+
+const q5 = new Questions(5, `What does the typeof operator do in JavaScript?`, `Determines the type of a variable`, [`Checks if a variable is defined`, `Determines the type of a variable`, `Converts a variable to a specific type`, `Creates a new variable of a specified type`]);
+
+const q6 = new Questions(6, `What is the difference between var, let and const?`, `var is function-scoped, let and const are blocked-scoped`, [`var is blocked-scoped, let and const are function scoped`, `var is function-scoped, let and const are blocked-scoped`, `They are all scoped`, `They aren't scoped at all`]);
+
+const q7 = new Questions(7, `What are data types in JavaScript?`, `String, Number, Boolean, Object, Undefined, Null, Symbol`, [`String, Integer, Boolean, Character`, `String, Number, Boolean, Object, Undefined, Null, Symbol`, `String, Float, Boolean, Object`, `Integer, Boolean, Array, Function`]);
+
+const q8 = new Questions(8, `What are JavaScript arrays?`, `Ordered collections of values`, [`Lists of key-value pairs`, `Collections of elements with a fixed size`, `Ordered collections of values`, `A type of object with a single value`]);
+
+const q9 = new Questions(9, `How do you access elements in an array?`, `By index`, [`By index`, `By key`, `By value`, `By property name`]);
+
+const q10 = new Questions(10, `What is a JavaScript object?`, `A collection of key-value pairs`, [`A primitive data type`, `A list of functions`, `A collection of key-value pairs`, `An ordered collection of values`]);
+
+const q11 = new Questions(11, `How do you add a property to an object?`, `object.property = value;`, [`object.property = value;`, `object.addProperty(property, value);`, `object.set(property, value);`, `object.insert(property, value);`]);
+
+const q12 = new Questions(12, `What is a JavaScript loop?`, `A way to repeat code`, [`A method to iterate over arrays`, `A function that executes repeatedly`, `A conditional statement`, `A way to repeat code`]);
+
+const q13 = new Questions(13, `How do write a 'for' loop in Javascript?`, `loop (i = 0; i < 10; i++) { }`, [`loop (i = 0; i < 10; i++) { }`, `loop (i = 0; i < 10; i++) { }`, `for (i < 10; i++) { }`, `repeat (i = 0; i < 10; i++) { }`]);
+
+const q14 = new Questions(14, `What is a while loop?`, `A loop that executes a block of code as long as a condition is true`, [`A loop that executes a block of code a fixed number of times`, `A loop that runs indefinitely`, `A loop that executes a block of code as long as a condition is true`, `A function that calls itself`]);
+
+const q15 = new Questions(15, `What is a do...while loop?`, `A loop that executes code at least once, then repeats as long as a condition is true`, [`A loop that executes code zero or more times`, `A loop that executes code at least once, then repeats as long as a condition is true`, `A loop that executes code based on user input`, `A loop that is used for recursion`]);
+
+const q16 = new Questions(16, `What are JavaScript conditional statements?`, `Statements that perform actions based on conditions`, [`Statements that declare variables`, `Statements that define functions`, `Statements that perform actions based on conditions`, `Statements that loop through data`]);
+
+const q17 = new Questions(17, `How do you write an if statement in JavaScript?`, `if (condition) { }`, [`if (condition) { }`, `if condition { }`, `check (condition) { }`, `if (condition) then { }`]);
+
+const q18 = new Questions(18, `What is the purpose of the switch statement?`, `To execute code based on multiple conditions`, [`To define new functions`, `To perform an action based on a condition`, `To loop through values`, `To execute code based on multiple conditions`]);
+
+let questionss = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18];
