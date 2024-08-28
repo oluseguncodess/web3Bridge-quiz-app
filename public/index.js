@@ -423,5 +423,16 @@ let questionss = [
             `To loop through values`,
             `To execute code based on multiple conditions`
         ]
+    },
+    {
+        no: 19,
+        question: `What is the purpose of the switch statement?`,
+        answer:`To execute code based on multiple conditions`,
+        options: [
+            ` To define new functions`, 
+            `To perform an action based on a condition`,
+            `To loop through values`,
+            `To execute code based on multiple conditions`
+        ]
     }
 ];
