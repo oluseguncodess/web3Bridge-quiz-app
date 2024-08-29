@@ -279,7 +279,7 @@ const q22 = new Questions(22, `What is the DOM (Document Object Model)`, `An API
 
 const q23 = new Questions(23, `How do you manipulate the DOM using JavaScript?`, `By using the DOM API methods`, [`By modifying the HTML structure directly`, `By writing CSS rules`, `By creating new files`, `By using the DOM API methods`]);
 
-const q24 = new Questions(24, `What is a JavaScript callback function?`, `A function that is passed as an argument to another functions`, [`A function that returns another function`, `A function that is passed as an argument to another function`, `A function that calls itself`, `A function that runs automatically on load`]);
+const q24 = new Questions(24, `What is a JavaScript callback function?`, `A function that is passed as an argument to another functions`, [`A function that returns another function`, `A function that is passed as an argument to another functions`, `A function that calls itself`, `A function that runs automatically on load`]);
 
 const q25 = new Questions(25, `What is the difference between synchronous and asynchronous code?`, `Synchronous code executes one line at a time, asynchronous code can execute out of order`, [`Synchronous code executes one line at a time, asynchronous code can execute out of order`, `Synchronous code is executed by the server, asynchronous code by the client`, `Synchronous code can be paused, asynchronous code cannot`, `Both execute in the same manner`]);
 
