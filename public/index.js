@@ -66,12 +66,12 @@ function showResultBox() {
     result.classList.add("active");
 
     const resultText = document.querySelector(".result-text");
-    if(userScore > 3) {
+    if(userScore > 39) {
         let resultTag = '<span class="flex mt-3 text-[14px] font-medium">Great work 🥳 , you got <p class="font-semibold px-[3px]">'+ userScore + '</p>out of<p class="font-semibold px-[3px]">' + questionss.length + '</p>questions</span>';
 
         resultText.innerHTML = resultTag; 
     } 
-    else if(userScore < 1) {
+    else if(userScore < 29) {
         let resultTag = '<span class="flex mt-3 text-[18px] font-medium">Sorry but, you got <p class="font-semibold px-[3px]">'+ userScore + '</p>out of<p class="font-semibold px-[3px]">' + questionss.length + '</p>questions</span>';
 
         resultText.innerHTML = resultTag; 
