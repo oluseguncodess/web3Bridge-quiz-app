@@ -269,4 +269,48 @@ const q17 = new Questions(17, `How do you write an if statement in JavaScript?`,
 
 const q18 = new Questions(18, `What is the purpose of the switch statement?`, `To execute code based on multiple conditions`, [`To define new functions`, `To perform an action based on a condition`, `To loop through values`, `To execute code based on multiple conditions`]);
 
-let questionss = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18];
+const q19 = new Questions(19, `How do you handle errors in JavaScript?`, `Using try...catch blocks`, [`Using try...catch blocks`, `Using if...else statements`, `Using error functions`, `Using debug commands`]);
+
+const q20 = new Questions(20, `What is an event in JavaScript?`, `An action or occurrence that is handled by the code`, [`A type of variable`, `An action or occurrence that is handled by the code`, `A loop that handles data`, `A function that executes on demand`]);
+
+const q21 = new Questions(21, `How do you add an event listener to an element?`, `element.addEventListener(event, function)`, [`element.addEventListener(event, function)`, `element.on(event, function)`, `element.attach(event, function)`, `element.listen(event, function)`]);
+
+const q22 = new Questions(22, `What is the DOM (Document Object Model)`, `An API for interacting with HTML and XML documents`, [`A server-side technology`, `A way to style documents`, `An API for interacting with HTML and XML documents`, `A database query language`]);
+
+const q23 = new Questions(23, `How do you manipulate the DOM using JavaScript?`, `By using the DOM API methods`, [`By modifying the HTML structure directly`, `By writing CSS rules`, `By creating new files`, `By using the DOM API methods`]);
+
+const q24 = new Questions(24, `What is a JavaScript callback function?`, `A function that is passed as an argument to another functions`, [`A function that returns another function`, `A function that is passed as an argument to another function`, `A function that calls itself`, `A function that runs automatically on load`]);
+
+const q25 = new Questions(25, `What is the difference between synchronous and asynchronous code?`, `Synchronous code executes one line at a time, asynchronous code can execute out of order`, [`Synchronous code executes one line at a time, asynchronous code can execute out of order`, `Synchronous code is executed by the server, asynchronous code by the client`, `Synchronous code can be paused, asynchronous code cannot`, `Both execute in the same manner`]);
+
+const q26 = new Questions(26, `What is a promise in JavaScript?`, `An object representing the eventual completion or failure of an asynchronous operation`, [`A data structure for storing values`, `A method for handling errors`, `An object representing the eventual completion or failure of an asynchronous operation`, `A function for iterating over values`]);
+
+const q27 = new Questions(27, `How do you create and use a JavaScript promise?`, `new Promise((resolve, reject) => { })`, [`new Promise((resolve, reject) => { })`, `Promise.create((resolve, reject) => { })`, `Promise((resolve, reject) => { })`, `new AsyncPromise((resolve, reject) => { })`])
+
+const q28 = new Questions(28, `What is async/await in JavaScript?`, `A way to handle asynchronous code in a more synchronous manner`, [`A technique for optimizing synchronous code`, `A method for defining global variable`, `A technique for optimizing synchronous code`, `A way to handle asynchronous code in a more synchronous manner`]);
+
+const q29 = new Questions(29, `What is the purpose of the this keyword in JavaScript?`, `To refer to the object that owns the method`, [`To refer to the previous value of a variable`, `To refer to the global object`, `To refer to the object that owns the method`, ` To refer to the function that is currently executing`]);
+
+const q30 = new Questions(30, `How do you create a JavaScript class?`, `class MyClass { constructor() { } }`, [`class MyClass { function() { } }`, `class MyClass { constructor() { } }`, `create class MyClass { }`, `function MyClass() { }`]);
+
+const q31 = new Questions(31, `What is inheritance in JavaScript?`, `A way to extend functionality from one class to another`, [`A method for creating objects`, `A technique for handling asynchronous operations`, `A way to define global functions`, `A way to extend functionality from one class to another`]);
+
+const q32 = new Questions(32, `What are JavaScript closures?`, `Functions that are defined inside another function and retain access to their outer function's variables`, [`Objects that encapsulate data and functions`, `Functions that execute repeatedly`, `Variables that are globally scoped`, `Functions that are defined inside another function and retain access to their outer function's variables`]);
+
+const q33 = new Questions(33, `How do you use the map method on an array?`, `array.map(callback)`, [`array.map(callback)`, `array.apply(callback)`, `array.filter(callback)`, `array.reduce(callback)`]);
+
+const q34 = new Questions(34, `How do you write an if statement in JavaScript?`, `if (condition) { }`, [`if (condition) { }`, `if condition { }`, `check (condition) { }`, `if (condition) then { }`]);
+
+const q35 = new Questions(35, `What is the filter method in JavaScript?`, `A method to create a new array with elements that pass a test`, [`A method to transform each element in an array`, `A method to create a new array with elements that pass a test`, `A method to sort elements in an array`, `A method to remove duplicates from an array`]);
+
+const q36 = new Questions(36, `How do you use the reduce method on an array?`, `array.reduce(callback, initialValue)`, [`array.reduce(callback, initialValue)`, `array.reduce(callback, initialValue)`, `array.map(callback, initialValue)`, `array.push(callback, initialValue)`]);
+
+const q37 = new Questions(37, `What is the spread operator?`, `... used to expand an iterable into elements`, [`[] used to create arrays`, `{} used to create objects`, `... used to expand an iterable into elements`, `() used to call functions`]);
+
+const q38 = new Questions(38, `What is destructuring in JavaScript?`, `A way to extract values from arrays or objects into distinct variables`, [`A method to modify the DOM`, `A way to extract values from arrays or objects into distinct variables`, `A technique to combine arrays`, `A way to define functions with multiple parameters`]);
+
+const q39 = new Questions(39, `What are JavaScript conditional statements?`, `Statements that perform actions based on conditions`, [`Statements that declare variables`, `Statements that define functions`, `Statements that perform actions based on conditions`, `Statements that loop through data`]);
+
+const q40 = new Questions(40, `What are JavaScript modules?`, `Pieces of reusable code that can be exported and imported`, [`Templates for HTML`, `Scripts for server-side operations`, `Pieces of reusable code that can be exported and imported`, `Stylesheets for CSS`]);
+
+let questionss = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24, q25, q26, q27, q28, q29, q30, q31, q32, q33, q34, q35, q36, q37, q38, q39, q40];
