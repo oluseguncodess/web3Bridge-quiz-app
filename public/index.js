@@ -313,4 +313,24 @@ const q39 = new Questions(39, `What are JavaScript conditional statements?`, `St
 
 const q40 = new Questions(40, `What are JavaScript modules?`, `Pieces of reusable code that can be exported and imported`, [`Templates for HTML`, `Scripts for server-side operations`, `Pieces of reusable code that can be exported and imported`, `Stylesheets for CSS`]);
 
-let questionss = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24, q25, q26, q27, q28, q29, q30, q31, q32, q33, q34, q35, q36, q37, q38, q39, q40];
+const q41 = new Questions(41, `What is localStorage and sessionStorage?`, `APIs for storing data on the client-side with persistence across sessions (localStorage) or for the duration of a page session (sessionStorage)`, [`Methods for storing data on the server`, `APIs for storing data on the client-side with persistence across sessions (localStorage) or for the duration of a page session (sessionStorage)`, `Techniques for managing cookies`, `Tools for accessing databases`]);
+
+const q42 = new Questions(42, `How do you create a function in JavaScript?`, `function myFunction() {}`, [`create function myFunction() {}`, `function myFunction() {}`, `func myFunction() {}`, `def myFunction() {}`]);
+
+const q43 = new Questions(43, `How do you make an HTTP request using JavaScript?`, `Using XMLHttpRequest or fetch`, [`Using XMLHttpRequest or fetch`, `Using HTTPClient`, `Using AJAX`, `Using HttpRequest`]);
+
+const q44 = new Questions(44, `What is AJAX?`, `A technique for making asynchronous HTTP requests`, [`A tool for styling web pages`, `A technique for making asynchronous HTTP requests`, `A method for storing data`, `A framework for building web applications`]);
+
+const q45 = new Questions(45, `What is the difference between null and undefined in JavaScript?`, `null is an intentional absence of value, undefined means a variable has not been assigned a value`, [`null is an intentional absence of value, undefined means a variable has not been assigned a value`, `null is a default value, undefined is an intentional absence of value`, `null is a variable type, undefined is an object`, `They are interchangeable and have the same meaning`]);
+
+const q46 = new Questions(46, `What does the following code snippet return? [] + []`, `""`, [`[]`, `null`, `""`, `undefined`]);
+
+const q47 = new Questions(47, `Which of the following expressions will throw an error?`, `NaN == NaN`, [`NaN == NaN`, `0 / 0`, `typeof null`, `0 == false`]);
+
+const q48 = new Questions(48, `How can you correctly determine if two variables, a and b, are both objects and have the same reference?`, `a === b`, [`Object.is(a, b)`, `a == b`, `a === b`, `JSON.stringify(a) === JSON.stringify(b)`]);
+
+const q49 = new Questions(49, `What is the output of the following code? console.log(typeof NaN);`, `number`, [`NaN`, `undefined`, `object`, `number`]);
+
+const q50 = new Questions(50, `Which method can be used to remove the last element from an array?`, `array.pop()`, [`array.shift()`, `array.pop()`, `array.push()`, `array.splice()`]);
+
+let questionss = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24, q25, q26, q27, q28, q29, q30, q31, q32, q33, q34, q35, q36, q37, q38, q39, q40, q41, q42, q43, q44, q45, q46, q47, q48, q49, q50];
